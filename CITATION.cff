@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you reference these contributor instructions, please cite them as below."
+title: "Medical Physics Community Code Exchange: contributor instructions"
+type: software
+authors:
+  - family-names: Anderson
+    given-names: Brian M.
+    affiliation: "University of California San Diego, Radiation Medicine and Applied Sciences"
+    orcid: "https://orcid.org/0000-0002-2748-1444"
+version: 0.1.0
+date-released: "2026-07-24"
+license: Apache-2.0
+repository-code: "https://github.com/brianmanderson/Contributing-To-The-Community"
+abstract: >-
+  Contributor on-ramp for the Medical Physics Community Code Exchange: repository
+  hygiene and PHI-avoidance practice, tiered acceptance requirements, license and
+  IP/DCO guidance, a pre-submission self-check, and the templates a submission
+  must carry. Repository hygiene defers to the CreatingGithubRepoInstructions
+  guide (https://github.com/brianmanderson/CreatingGithubRepoInstructions).
+references:
+  - type: software
+    title: "Creating GitHub Repositories — Mindfully"
+    authors:
+      - family-names: Anderson
+        given-names: Brian M.
+    repository-code: "https://github.com/brianmanderson/CreatingGithubRepoInstructions"
+    notes: >-
+      Upstream guide for PHI-safe repository creation; the normative source for
+      Step 0 of these instructions.
