@@ -45,7 +45,7 @@ making.
 The **Developer Certificate of Origin (DCO)**: a line on each commit reading
 
 ```
-Signed-off-by: Your Name <you@institution.edu>
+Signed-off-by: Your Name <your.email@example.com>
 ```
 
 which `git commit -s` adds for you. It attests that you wrote the contribution,
@@ -55,11 +55,34 @@ A bot checks that every commit in the submitted range carries the line.
 **Submissions with unsigned commits are returned before review starts** — this
 is automated and impersonal, so save yourself the round trip.
 
+### Any working email address is fine
+
+**Use whatever address you actually use for git.** Personal, Gmail,
+institutional, your GitHub `noreply` address — all of them are accepted, and a
+non-university address is never grounds for returning a submission. The DCO
+asks for a real identity that reaches a real person, not proof of affiliation.
+
+Plenty of good reasons to prefer a personal address: you change jobs and the
+university address dies while the commits live forever; your institution
+rewrites or blocks outbound mail; the work spans two appointments; you simply
+keep your open-source identity separate from your employer's mail system. None
+of that is our business.
+
+Two things this does **not** change:
+
+- **Whether you have the right to release the code** — that is about who owned
+  the work, not which mailbox you sign from. A personal Gmail on the commit
+  does not make employer-owned code yours. Everything above this section still
+  applies.
+- **The Institution field on the intake form**, which stays required. It is
+  used for reviewer-independence checks (we cannot assign you a reviewer from
+  your own shop if we don't know your shop), not for identity verification.
+
 ### Signing off in practice
 
 ```bash
 git config --global user.name  "Your Name"
-git config --global user.email "you@institution.edu"
+git config --global user.email "your.email@example.com"   # any address you use
 
 git commit -s -m "Add dose-grid resampling"      # -s adds the trailer
 ```
