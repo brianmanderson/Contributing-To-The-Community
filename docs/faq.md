@@ -39,12 +39,14 @@ Tier 2 if you have tests, docs, and a tagged release; Tier 1 if you don't yet.
 Tier 1 → Tier 2 promotion is supported.
 
 **Can I sign off with a personal email instead of my university address?**
-Yes. Personal, Gmail, institutional, GitHub `noreply` — any working address is
-accepted, and a non-university address is never grounds for returning a
-submission. The DCO attests a real identity and your right to contribute, not
-your affiliation. (Separately: the intake form's Institution field stays
-required, because reviewer-independence checks depend on knowing where you
-work.)
+Yes — any domain is fine (Gmail, Yahoo, Hotmail, your own), and a
+non-university address is never grounds for returning a submission. The one
+requirement is that the address be **added and verified on your GitHub
+account**; unconfirmed addresses don't count. Quick check: open one of your
+commits on GitHub — if your avatar and a clickable username appear, you're
+set. See [04-ip-and-dco.md](04-ip-and-dco.md#the-one-rule-about-which-address-it-must-be-verified-on-your-github-account).
+(Separately: the intake form's Institution field stays required, because
+reviewer-independence checks depend on knowing where you work.)
 
 **My repo has years of unsigned commits. Do I have to rewrite history?**
 Don't rewrite anything on your own initiative. Sign off going forward, submit,

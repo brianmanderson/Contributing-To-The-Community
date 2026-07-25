@@ -47,7 +47,10 @@ Everything here is bot-checkable except R1.6.
 - **R1.6 Reviewer sanity pass** — one reviewer confirms the worked example runs
   and the code does what the README claims.
 - **R1.7 Automated scans pass** — PHI scan and vendor-binary scan clean.
-- **R1.8 DCO** — every commit in the submitted range carries `Signed-off-by`.
+- **R1.8 DCO** — every commit in the submitted range carries `Signed-off-by`,
+  using an email address **verified on the signer's GitHub account**. Any
+  domain qualifies; verification on the account is what is required. See
+  [04-ip-and-dco.md](04-ip-and-dco.md).
 
 ## Tier 2 — Rigorous (the default for mature tools)
 

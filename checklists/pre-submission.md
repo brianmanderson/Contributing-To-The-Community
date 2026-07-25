@@ -44,6 +44,10 @@ worked.
 - [ ] **R1.8 DCO** — every commit in the submitted range carries
       `Signed-off-by`. I have the right to release this code
       ([04-ip-and-dco.md](../docs/04-ip-and-dco.md)).
+- [ ] The sign-off address is **verified on my GitHub account** — any domain
+      (Gmail, Yahoo, university, my own) is fine, but it must be confirmed on
+      the account. Checked by opening one of my commits on GitHub and seeing
+      my avatar and a clickable username next to it.
 - [ ] I am submitting a **specific commit SHA**, and it is the one I mean.
 
 *(R1.6, the reviewer sanity pass, is not yours to tick — but you can make it

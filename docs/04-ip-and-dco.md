@@ -55,23 +55,50 @@ A bot checks that every commit in the submitted range carries the line.
 **Submissions with unsigned commits are returned before review starts** — this
 is automated and impersonal, so save yourself the round trip.
 
-### Any working email address is fine
+### The one rule about which address: it must be verified on your GitHub account
 
-**Use whatever address you actually use for git.** Personal, Gmail,
-institutional, your GitHub `noreply` address — all of them are accepted, and a
-non-university address is never grounds for returning a submission. The DCO
-asks for a real identity that reaches a real person, not proof of affiliation.
+**Any domain is fine. Gmail, Yahoo, Hotmail, Proton, your university, your own
+domain — we do not care, and a non-university address is never grounds for
+returning a submission.** The DCO attests a real identity and your right to
+contribute, not your affiliation.
 
-Plenty of good reasons to prefer a personal address: you change jobs and the
-university address dies while the commits live forever; your institution
-rewrites or blocks outbound mail; the work spans two appointments; you simply
-keep your open-source identity separate from your employer's mail system. None
-of that is our business.
+What we do require: **the address you sign off with must be one you have added
+and verified on your GitHub account.** That is what turns the trailer from a
+line of text anyone could type into an attestation tied to a real, reachable
+account.
 
-Two things this does **not** change:
+There are good reasons to prefer a personal address, and none of them are our
+business: you change jobs and the university address dies while the commits
+live forever; your institution rewrites or blocks outbound mail; the work spans
+two appointments; you keep your open-source identity separate from your
+employer's mail system.
+
+#### Adding and verifying the address (two minutes, one time)
+
+1. GitHub → **Settings → Emails → Add email address**.
+2. Click the confirmation link GitHub mails you. Unconfirmed addresses do not
+   count — this is the whole point of the rule.
+3. Set git to use that exact address (see below), and make sure it matches
+   **character for character** — `J.Smith@gmail.com` and `j.smith@gmail.com`
+   are the same mailbox to your mail provider but not necessarily the same
+   string to a checker.
+
+#### How to tell it worked
+
+Open any of your commits on GitHub. If your **avatar and a clickable username**
+appear next to it, GitHub has matched the commit email to your account and you
+are fine. If you see a plain name with no avatar and no link, the address is
+not on your account — fix that before you submit.
+
+> **GitHub `noreply` addresses** (`12345+username@users.noreply.github.com`)
+> are account-owned by construction and are fine to sign with if you prefer not
+> to publish a real address. This is the right choice if privacy is what was
+> pushing you toward an institutional address.
+
+Two things this rule does **not** change:
 
 - **Whether you have the right to release the code** — that is about who owned
-  the work, not which mailbox you sign from. A personal Gmail on the commit
+  the work, not which mailbox you sign from. A verified Gmail on the commit
   does not make employer-owned code yours. Everything above this section still
   applies.
 - **The Institution field on the intake form**, which stays required. It is
@@ -82,7 +109,7 @@ Two things this does **not** change:
 
 ```bash
 git config --global user.name  "Your Name"
-git config --global user.email "your.email@example.com"   # any address you use
+git config --global user.email "your.email@example.com"   # must be verified on GitHub
 
 git commit -s -m "Add dose-grid resampling"      # -s adds the trailer
 ```
