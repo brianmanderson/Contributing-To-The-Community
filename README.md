@@ -88,7 +88,9 @@ process wherever it says to notify Brian or UCSD Health.)*
   assembly. ESAPI and RayStation scripts are fully in scope — reference the
   assemblies from the local install and declare your tested platform versions.
 - **Non-OSI licenses**, including "free for academic/non-commercial use."
-- **Unsigned commits.** Every commit needs a DCO `Signed-off-by` line.
+- **A missing DCO attestation.** Your existing history does not need signing —
+  post the submission-time attestation in your intake issue, then sign new
+  commits with `git commit -s`.
 
 ---
 

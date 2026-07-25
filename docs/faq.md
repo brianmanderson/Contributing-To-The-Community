@@ -49,9 +49,12 @@ set. See [04-ip-and-dco.md](04-ip-and-dco.md#the-one-rule-about-which-address-it
 reviewer-independence checks depend on knowing where you work.)
 
 **My repo has years of unsigned commits. Do I have to rewrite history?**
-Don't rewrite anything on your own initiative. Sign off going forward, submit,
-and note the situation in your intake issue — how the DCO rule applies to
-pre-existing history is being finalized.
+No — settled policy (R-11). Historical commits never need signing, and you
+should **not** rewrite published history to add trailers (it breaks everyone
+else's clones and forks). Post the submission-time attestation in your intake
+issue — one statement covering the whole tree at the reviewed commit — then
+sign every commit from that day forward with `git commit -s`. See
+[04-ip-and-dco.md](04-ip-and-dco.md#you-do-not-need-to-sign-your-existing-history).
 
 **Is a private repo enough while I get organized?**
 Private is the right default while you're still finding out what's in your

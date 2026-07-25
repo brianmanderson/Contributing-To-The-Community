@@ -41,8 +41,10 @@ worked.
 - [ ] **R1.7 Submission scanners clean** — `python phi_scan.py .` and
       `python vendor_binary_scan.py .` both exit **0**. (Exit 2 is an
       environment error, not a pass.)
-- [ ] **R1.8 DCO** — every commit in the submitted range carries
-      `Signed-off-by`. I have the right to release this code
+- [ ] **R1.8 DCO** — I have the right to release this code, and I am ready to
+      post the submission-time attestation in my intake issue. My existing
+      history does **not** need signing; I will sign every commit from
+      submission day forward with `git commit -s`
       ([04-ip-and-dco.md](../docs/04-ip-and-dco.md)).
 - [ ] The sign-off address is **verified on my GitHub account** — any domain
       (Gmail, Yahoo, university, my own) is fine, but it must be confirmed on

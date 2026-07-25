@@ -51,9 +51,30 @@ Signed-off-by: Your Name <your.email@example.com>
 which `git commit -s` adds for you. It attests that you wrote the contribution,
 or otherwise have the right to submit it under the stated open-source license.
 
-A bot checks that every commit in the submitted range carries the line.
-**Submissions with unsigned commits are returned before review starts** — this
-is automated and impersonal, so save yourself the round trip.
+### You do not need to sign your existing history
+
+Most tools worth submitting were written long before you heard of this program,
+and rewriting history to add trailers would break every clone, fork, and
+citation pointing at your repo. So sign-off is **going-forward, not
+retroactive** (R-11):
+
+1. **Attest once, at submission.** Post this in your intake issue — it covers
+   everything in the tree at the commit under review, and carries the same
+   meaning as a trailer on each historical commit:
+
+   ```
+   I have the right to contribute the entire tree at commit <SHA> under
+   <LICENSE>, and I submit it under the terms of the Developer Certificate
+   of Origin (developercertificate.org).
+   Signed-off-by: Your Name <your.email@example.com>
+   ```
+
+2. **Sign every commit from that day forward** with `git commit -s`. A bot
+   enforces this on the frozen fork and it is expected on your live repo. If
+   you start a new repo after joining, sign from the very first commit.
+
+**You will not be returned for unsigned history.** You will be returned for
+skipping the attestation, or for going back to unsigned commits afterward.
 
 ### The one rule about which address: it must be verified on your GitHub account
 
@@ -114,21 +135,16 @@ git config --global user.email "your.email@example.com"   # must be verified on 
 git commit -s -m "Add dose-grid resampling"      # -s adds the trailer
 ```
 
-To sign off commits you already made, on a branch you have not shared:
-
-```bash
-git rebase --signoff <base-commit>               # adds the trailer to a range
-```
-
 GitHub Desktop does not add the trailer for you — type it as the last line of
 the commit description, exactly matching your git `user.name` and `user.email`.
 
-> **Pre-existing repositories with long histories:** whether the DCO
-> requirement applies to *every historical commit* or only to the submitted
-> range is a policy point the program is still finalizing. If your repo has
-> years of unsigned history, **submit anyway and say so in the intake issue** —
-> do not rewrite years of history on your own initiative. Rewriting history to
-> satisfy a rule that may not require it is the worse outcome.
+> **Pre-existing repositories with long histories: do nothing.** Settled by
+> R-11 — historical commits never need signing. Post the submission-time
+> attestation above and sign from that day forward. **Do not** run
+> `git rebase --signoff` over shared history to "fix" it: rewriting published
+> history breaks other people's clones and forks, and the rule does not ask
+> for it. (`git rebase --signoff <base>` is only ever appropriate on a branch
+> you have never shared.)
 
 ## Special cases
 

@@ -47,10 +47,13 @@ Everything here is bot-checkable except R1.6.
 - **R1.6 Reviewer sanity pass** — one reviewer confirms the worked example runs
   and the code does what the README claims.
 - **R1.7 Automated scans pass** — PHI scan and vendor-binary scan clean.
-- **R1.8 DCO** — every commit in the submitted range carries `Signed-off-by`,
-  using an email address **verified on the signer's GitHub account**. Any
-  domain qualifies; verification on the account is what is required. See
-  [04-ip-and-dco.md](04-ip-and-dco.md).
+- **R1.8 DCO** — sign-off is **going-forward, not retroactive**. You do not
+  need to sign your existing history. Instead: (a) post the submission-time
+  attestation in your intake issue, covering the whole tree at the reviewed
+  commit, and (b) sign every commit from your submission date onward
+  (`git commit -s`). Repos started after you join sign from commit one. The
+  address must be **verified on your GitHub account**; any domain qualifies.
+  See [04-ip-and-dco.md](04-ip-and-dco.md).
 
 ## Tier 2 — Rigorous (the default for mature tools)
 
