@@ -106,8 +106,15 @@ docs/05-submitting.md      The intake form and what happens next
 docs/06-after-acceptance.md  Frozen fork, DOI, badge, re-verification, promotion
 docs/faq.md                Short answers to the recurring questions
 checklists/pre-submission.md  Author self-check, by tier
-templates/                 Files to copy into YOUR repo
 ```
+
+The files you copy into your own repository — `README.template.md`,
+`CITATION.cff.template`, `gitignore_esapi.template`, and the three CI
+workflows — live in the index repo, at
+[templates/](https://github.com/medphys-code-exchange/index/tree/main/templates).
+They are kept there rather than here so there is exactly one copy: these pages
+had already drifted from it once, and a stale copy of a scanner workflow is
+worse than no copy at all.
 
 ## Questions, corrections, and improving this guide
 

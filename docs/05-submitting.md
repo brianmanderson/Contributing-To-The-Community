@@ -25,8 +25,9 @@ pre-commit hook, the `.gitignore` work — is
 
 ## Wire the checks into your own CI (recommended)
 
-Copy the three workflow templates from [`../templates/workflows/`](../templates/workflows/)
-into your repo's `.github/workflows/`:
+Copy the three workflow templates from
+[`templates/workflows/`](https://github.com/medphys-code-exchange/index/tree/main/templates/workflows)
+in the index repo into your own repo's `.github/workflows/`:
 
 | File | What it does |
 |---|---|
