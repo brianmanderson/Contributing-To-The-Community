@@ -32,7 +32,7 @@ worked.
 - [ ] **R1.2 License** — `LICENSE` (or `LICENSE.txt` / `LICENSE.md` /
       `COPYING`) at the repo root, OSI-approved, copyright line filled in.
 - [ ] **R1.3 Citation** — valid `CITATION.cff`
-      ([template](../templates/CITATION.cff.template)); validated, e.g. with
+      ([template](https://github.com/medphys-code-exchange/index/blob/main/templates/CITATION.cff.template)); validated, e.g. with
       [cffconvert](https://github.com/citation-file-format/cffconvert).
 - [ ] **R1.4 Pinned dependencies** — `requirements.txt` with versions, `.csproj`
       with package versions, or an equivalent lockfile.
@@ -67,7 +67,8 @@ easy by having actually run your own worked example from a clean clone.)*
 - [ ] **R2.4 Platform matrix declared** — language runtime, key dependency
       versions, and for vendor-API code the vendor platform versions
       (e.g. "Python 3.12" or "Eclipse 18.0 / ESAPI 18.0").
-- [ ] CI workflows wired up from [templates/workflows/](../templates/workflows/),
+- [ ] CI workflows wired up from
+      [templates/workflows/](https://github.com/medphys-code-exchange/index/tree/main/templates/workflows),
       with `SCANNER_REF` pinned to a tagged scanner release (not a branch).
 
 ## Tier C — clinical-adjacent: everything above, plus

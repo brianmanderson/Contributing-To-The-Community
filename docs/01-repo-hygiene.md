@@ -91,7 +91,7 @@ redistributing the vendor's assemblies.
 - **Never commit** `VMS.TPS.Common.Model.API.dll`, `VMS.TPS.Common.Model.Types.dll`,
   any other `VMS.*` assembly, RayStation `.dll`s, or vendor installers.
   Reference them from the local install path.
-- Copy [../templates/gitignore_esapi.template](../templates/gitignore_esapi.template)
+- Copy [gitignore_esapi.template](https://github.com/medphys-code-exchange/index/blob/main/templates/gitignore_esapi.template)
   into your repo as `.gitignore` (or merge it into the medical-project one) —
   it covers the usual `bin/`, `obj/`, and vendor-reference paths.
 - **Declare your platform matrix** — tested Eclipse/ESAPI or RayStation

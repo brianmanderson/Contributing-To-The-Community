@@ -1,0 +1,59 @@
+# docs/02-tiers.md and the index repo's docs/tiers.md are deliberately
+# different documents — this one is contributor-facing prose, that one is the
+# normative policy text. What must NOT differ is the set of requirement IDs
+# they define: an author reads R1.4 here and a reviewer applies R1.4 there.
+#
+# The two cannot be deduplicated, so they are checked instead. The templates
+# that COULD be deduplicated no longer live here at all; they are in the index
+# repo, which is why this is the only cross-repo guard left.
+#
+# Runs weekly as well as on change: drift can be introduced upstream by an edit
+# to the index repo, with no pull request here to trigger a check.
+name: Tier IDs match the index repo
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  tier-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the normative tier document
+        run: |
+          curl -sSfL -o upstream-tiers.md \
+            "https://raw.githubusercontent.com/medphys-code-exchange/index/main/docs/tiers.md"
+
+      - name: Compare requirement ID sets
+        run: |
+          ids() { grep -oE '\bR[0-9C]+\.[0-9]+\b' "$1" | sort -u; }
+          ids upstream-tiers.md > upstream.ids
+          ids docs/02-tiers.md   > here.ids
+
+          # A silently empty extraction would make any two files "match".
+          if [ ! -s upstream.ids ]; then
+            echo "::error::No requirement IDs found in the index repo's docs/tiers.md."
+            echo "Either the document moved or the ID format changed. Fix this check."
+            exit 1
+          fi
+
+          if diff -u upstream.ids here.ids > ids.diff; then
+            echo "Requirement IDs match ($(wc -l < here.ids) of them)."
+            exit 0
+          fi
+
+          echo "::error::docs/02-tiers.md and the index repo's docs/tiers.md define different requirement IDs."
+          echo
+          echo "  -  only in the index repo (normative, missing from these instructions)"
+          echo "  +  only here (documented to contributors but not in policy)"
+          echo
+          cat ids.diff
+          echo
+          echo "These two documents are allowed to read differently, but the IDs"
+          echo "they define must be identical. Reconcile them before merging."
+          exit 1

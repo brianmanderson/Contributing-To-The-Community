@@ -35,11 +35,11 @@ Everything here is bot-checkable except R1.6.
 
 - **R1.1 README** — purpose statement, installation steps, and at least one
   fully worked example a stranger can run end to end. See
-  [../templates/README.template.md](../templates/README.template.md).
+  [README.template.md](https://github.com/medphys-code-exchange/index/blob/main/templates/README.template.md).
 - **R1.2 License** — a `LICENSE` file with an OSI-approved license. See
   [03-licensing.md](03-licensing.md).
 - **R1.3 Citation** — a valid `CITATION.cff`. See
-  [../templates/CITATION.cff.template](../templates/CITATION.cff.template).
+  [CITATION.cff.template](https://github.com/medphys-code-exchange/index/blob/main/templates/CITATION.cff.template).
 - **R1.4 Pinned dependencies** — `requirements.txt` with versions, `.csproj`
   with package versions, or an equivalent lockfile.
 - **R1.5 Runnable example data** — synthetic or public data, bundled or fetched
