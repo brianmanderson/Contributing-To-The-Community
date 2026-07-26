@@ -16,6 +16,14 @@ No. It's minted at acceptance (Tier 2 and Tier C) and back-filled into your
 `CITATION.cff` by a pull request you merge. Tier 1 gets an index entry and
 badge, no DOI.
 
+**Which DOI ends up in my `CITATION.cff` — the versioned one?**
+No, the concept DOI, which always resolves to your newest release. That way
+the line stays correct every time you publish and you never have to update it.
+The index entry records the version DOI for the reviewed release, since the
+badge certifies that specific commit. If your repo has a `.zenodo.json`, note
+that Zenodo ignores `CITATION.cff` completely in its favour — see
+[06-after-acceptance.md](06-after-acceptance.md).
+
 **My code is an ESAPI script. Is that in scope?**
 Yes, fully — vendor-API code is a large share of what physicists actually
 re-implement. What you must never do is commit vendor assemblies (`VMS.*.dll`
