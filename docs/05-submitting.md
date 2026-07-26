@@ -36,9 +36,10 @@ into your repo's `.github/workflows/`:
 
 Each one pins `SCANNER_REF` to a tagged scanner release rather than a branch —
 an unpinned ref makes results irreproducible and would let a change to the
-org's default branch silently alter what runs inside your CI. **Replace the
-`PIN_TO_RELEASE_TAG` placeholder with the current scanner release tag**; the
-templates fail loudly until you do, by design.
+org's default branch silently alter what runs inside your CI. The templates
+ship pinned to the current release, so they work as copied. Check
+[the releases page](https://github.com/medphys-code-exchange/index/releases)
+for a newer tag before you submit; a reviewer may ask you to move to it.
 
 ## Test data
 

@@ -27,7 +27,10 @@ jobs:
           fi
           # Dependency manifests may live anywhere in the tree — Visual Studio
           # convention puts .csproj in a project subdirectory, not the repo root.
-          manifests=$(find . -path ./.git -prune -o -type f \( \
+          # Prune vendored/virtualenv trees: a committed .venv or node_modules
+          # is full of other projects' manifests and would mask a missing one.
+          manifests=$(find . \( -name .git -o -name .venv -o -name venv \
+              -o -name node_modules -o -name site-packages \) -prune -o -type f \( \
               -name 'requirements*.txt' \
               -o -name 'pyproject.toml' \
               -o -name 'setup.py' \
