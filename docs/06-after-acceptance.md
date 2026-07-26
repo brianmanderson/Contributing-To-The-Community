@@ -13,9 +13,22 @@ Acceptance is a set of concrete, mechanical things. Here is all of them.
    remains retrievable at that exact state even if your repo moves, is renamed,
    or goes away.
 3. **Mints a DOI** (Tier 2 and Tier C) — the frozen fork is tagged at the
-   reviewed commit, Zenodo mints a DOI from that org-owned release, and the DOI
+   reviewed commit and Zenodo mints a DOI from that org-owned release. The DOI
    is back-filled into your `CITATION.cff` by pull request **which you merge**.
    Nothing is pushed into your repository without your approval.
+
+   Zenodo actually mints two, and you get the more useful one. The **version
+   DOI** points at that one release; the **concept DOI** always resolves to
+   your newest version. Your `CITATION.cff` gets the **concept DOI**, so it
+   keeps being correct every time you release — you never have to come back
+   and update it. The index entry records the version DOI instead, because the
+   badge certifies the specific commit that was reviewed.
+
+   One thing to check before you submit: if your repo contains a
+   `.zenodo.json`, Zenodo uses it and **ignores your `CITATION.cff` entirely**.
+   Since the Exchange reviews your `CITATION.cff`, a `.zenodo.json` means the
+   published DOI record will not match what was reviewed. Reviewers will flag
+   it. Simplest fix is to delete it and let `CITATION.cff` be the one source.
 4. **Publishes your index entry and badge** — with your license, tier,
    platform matrix, verification date, and links to both the live repo and the
    frozen fork.

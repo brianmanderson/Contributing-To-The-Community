@@ -64,6 +64,10 @@ easy by having actually run your own worked example from a clean clone.)*
 - [ ] **R2.3 Tagged release exists now**, matching the submitted commit. I am
       submitting the tag's commit, not the tip of `main`. (No DOI needed yet —
       it's minted at acceptance.)
+- [ ] **No `.zenodo.json` in the repo.** If one is present Zenodo ignores
+      `CITATION.cff` entirely, so the published DOI record would not match the
+      citation file under review. Delete it and let `CITATION.cff` be the
+      single source.
 - [ ] **R2.4 Platform matrix declared** — language runtime, key dependency
       versions, and for vendor-API code the vendor platform versions
       (e.g. "Python 3.12" or "Eclipse 18.0 / ESAPI 18.0").
