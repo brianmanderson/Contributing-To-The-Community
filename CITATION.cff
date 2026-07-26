@@ -10,7 +10,7 @@ authors:
 version: 0.1.0
 date-released: "2026-07-24"
 license: Apache-2.0
-repository-code: "https://github.com/brianmanderson/Contributing-To-The-Community"
+repository-code: "https://github.com/medphys-code-exchange/Contributing-To-The-Community"
 abstract: >-
   Contributor on-ramp for the Medical Physics Community Code Exchange: repository
   hygiene and PHI-avoidance practice, tiered acceptance requirements, license and

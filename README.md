@@ -9,13 +9,14 @@ acceptance we mint a citation and a frozen, badged snapshot pinned to the exact
 commit that was reviewed. Review is open and public, JOSS-style — your
 reviewers are named, and so is their work.
 
-> **Status: pilot standup.** The org's `index` repo — which holds the intake
-> issue form, the submission scanners, and the published index — is being stood
-> up now, so links to `medphys-code-exchange/index` on these pages go live as
-> that lands. **Step 0 works today**, and everything in
-> [checklists/pre-submission.md](checklists/pre-submission.md) is worth doing
-> before there is anywhere to submit it. If you want to be among the first
-> tools indexed, open an issue here and say so.
+> **Status: pilot — submissions are open.** The
+> [index repo](https://github.com/medphys-code-exchange/index) is live, and it
+> carries the intake form, the submission scanners, and the published index.
+> Two things are still being wired, and it is only fair to say so up front:
+> DOI minting is not yet connected, so a DOI for an early acceptance is
+> back-filled into your `CITATION.cff` once it is; and the reviewer pool is
+> still small, so turnaround can run past the 30-day target. Submitting now
+> means being among the first tools indexed.
 
 ---
 
