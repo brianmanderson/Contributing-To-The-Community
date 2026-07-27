@@ -40,8 +40,25 @@ Everything here is bot-checkable except R1.6.
   [03-licensing.md](03-licensing.md).
 - **R1.3 Citation** — a valid `CITATION.cff`. See
   [CITATION.cff.template](https://github.com/medphys-code-exchange/index/blob/main/templates/CITATION.cff.template).
-- **R1.4 Pinned dependencies** — `requirements.txt` with versions, `.csproj`
-  with package versions, or an equivalent lockfile.
+- **R1.4 Declared dependencies** — every runtime dependency carries a version
+  relation. **A bare `numpy` fails; `numpy>=1.24` passes.** What relation
+  depends on what you built:
+  - **Writing an application** (something people *run* — a script, notebook,
+    CLI, service)? Pin exactly, or ship a lockfile. Nobody depends on your
+    resolution, so reproducibility wins.
+  - **Writing a library** (something people *import*)? A lower bound is
+    enough, and is what we want: `>=` the oldest version you actually tested.
+    Don't add an upper bound out of caution — capping by default is what makes
+    dependency resolution impossible downstream. Add one only for a specific
+    known incompatibility. `~=` is fine if you want major-version semantics.
+  - **Either way:** if you depend on a git URL, pin it to a commit SHA or tag.
+    Unpinned, it installs whatever that branch happens to hold that day.
+  - **Either way:** include a record of the versions your tests actually
+    passed against on the submitted commit — a `pip freeze` from your CI run
+    is ideal, committed as something like `constraints-reviewed.txt` or just
+    pasted into your review issue. Your lower bounds tell users what they
+    *may* install; this tells a reader years later what was *verified*, which
+    is what the badge claims.
 - **R1.5 Runnable example data** — synthetic or public data, bundled or fetched
   by the example, sufficient to execute the worked example. **No PHI.**
 - **R1.6 Reviewer sanity pass** — one reviewer confirms the worked example runs
