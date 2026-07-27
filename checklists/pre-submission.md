@@ -34,8 +34,14 @@ worked.
 - [ ] **R1.3 Citation** — valid `CITATION.cff`
       ([template](https://github.com/medphys-code-exchange/index/blob/main/templates/CITATION.cff.template)); validated, e.g. with
       [cffconvert](https://github.com/citation-file-format/cffconvert).
-- [ ] **R1.4 Pinned dependencies** — `requirements.txt` with versions, `.csproj`
-      with package versions, or an equivalent lockfile.
+- [ ] **R1.4 Declared dependencies** — no bare names. `numpy` fails,
+      `numpy>=1.24` passes. Writing a **library**? Lower bounds are what we
+      want — don't add upper caps out of caution. Writing an **application**?
+      Pin exactly or ship a lockfile. Any `git+` dependency pinned to a SHA
+      or tag.
+- [ ] **R1.4 reproducibility record** — the resolved versions my tests
+      actually passed against on the submitted commit (a `pip freeze` from CI
+      is ideal), committed or ready to paste into the review issue.
 - [ ] **R1.5 Example data** — synthetic or public, bundled or fetched by the
       example, enough to run it. **No PHI.**
 - [ ] **R1.7 Submission scanners clean** — `python phi_scan.py .` and
